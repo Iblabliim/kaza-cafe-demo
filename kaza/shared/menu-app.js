@@ -247,7 +247,7 @@
     els.sheetIng.innerHTML = ing.map((x) => `<li>${x}</li>`).join("");
     els.sheetIngWrap.hidden = !ing.length;
     els.sheetOpts.innerHTML = optionsHTML(it);
-    els.order.href = K.meta.orderUrl;
+    if (els.order) els.order.href = K.meta.orderUrl;
     els.sheetScroll.scrollTop = 0;
   }
 
@@ -392,7 +392,7 @@
     });
 
     // Copier le lien de l'item
-    els.share.addEventListener("click", () => {
+    if (els.share) els.share.addEventListener("click", () => {
       const url = location.href.split("#")[0] + "#" + state.openId;
       const ok = () => { els.share.textContent = S.t("sheet.copied"); setTimeout(() => (els.share.textContent = S.t("sheet.share")), 1600); };
       try { navigator.clipboard.writeText(url).then(ok, () => {}); } catch (e) {}
