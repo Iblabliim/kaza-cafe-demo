@@ -183,8 +183,10 @@ body { font: 400 16.5px/1.55 var(--f-sans); }
 .quotes blockquote::after { content: " »"; }
 .quotes blockquote:lang(en)::before { content: "“"; }
 .quotes blockquote:lang(en)::after { content: "”"; }
-.q-src { display: flex; align-items: center; gap: 10px; font-size: 12.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--on-blue); }
+.q-src { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; font-size: 12.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--on-blue); }
 .q-stars { letter-spacing: .1em; color: var(--white); font-size: 13px; }
+.q-name { color: var(--white); font-weight: 700; letter-spacing: .04em; }
+.q-meta { flex-basis: 100%; font-weight: 500; opacity: .85; }
 .q-more { align-items: flex-start; justify-content: center !important; background: rgba(255, 255, 255, .14) !important; }
 .q-more-mascot { width: 54px; color: var(--white); }
 .q-more p { font: 400 26px/1.1 var(--f-display); text-transform: uppercase; max-width: 18ch; }
