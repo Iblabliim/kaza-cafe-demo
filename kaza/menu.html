@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Menu | KAZA CAFÉ, boul. Rosemont, Montréal</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="robots" content="noindex">
+<meta name="description" content="Le menu complet de KAZA CAFÉ : sandwichs ciabatta, Mi-Kaza, bols, cafés, matcha et hojicha « Camellia », chaï, smoothies, limonades bio, biscuits, croissants, gaufres et gâteaux.">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="canonical" href="https://demo.backrooms.tech/kaza/menu.html"><!-- [À CONFIRMER : domaine] -->
+<link rel="alternate" hreflang="fr-CA" href="https://demo.backrooms.tech/kaza/menu.html">
+<link rel="alternate" hreflang="en-CA" href="https://demo.backrooms.tech/kaza/menu.html?lang=en">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KAZA CAFÉ">
+<meta property="og:title" content="Le menu · KAZA CAFÉ">
+<meta property="og:description" content="Matcha en 18 saveurs, sandwichs ciabatta, bols et pâtisseries. 3306 boul. Rosemont, Montréal.">
+<meta property="og:image" content="https://demo.backrooms.tech/kaza/images/og/kaza-og.png">
+<meta property="og:locale" content="fr_CA"><meta property="og:locale:alternate" content="en_CA">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="images/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chewy&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="shared/base.css">
+<link rel="stylesheet" href="b.css">
+</head>
+<body>
+<a class="skip" href="#menu-list" data-i18n="skip">Aller au contenu</a>
+
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <nav class="nav" aria-label="Principal">
+      <a href="index.html" data-i18n="nav.home">Accueil</a>
+      <a href="menu.html" aria-current="page" data-i18n="nav.menu">Menu</a>
+      <a href="index.html#lieu" data-i18n="nav.place">Le lieu</a>
+      <a href="index.html#infos" data-i18n="nav.info">Infos</a>
+    </nav>
+    <a class="wordmark" href="index.html" aria-label="KAZA CAFÉ, accueil">KAZA CAFÉ</a>
+    <div class="topbar-end">
+      <p class="status" data-status><span class="dot" aria-hidden="true"></span><span data-status-text>Ouvert</span></p>
+      <button class="lang" type="button" data-lang-switch data-i18n="lang.switch" data-i18n-attr="aria-label:lang.label">EN</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="menu-hero">
+    <div class="wrap menu-head">
+      <h1 class="menu-title" data-i18n="menu.title">Le menu</h1>
+      <span class="menu-mascot m-walk" data-mascot-el="sandwich"></span>
+    </div>
+  </section>
+
+  <div class="wrap menu-layout">
+    <!-- Colonne de gauche : recherche + filtres + catégories (collante sur desktop) -->
+    <aside class="menu-side">
+      <div class="side-tools">
+        <div class="search">
+          <label class="sr-only" for="menu-search" data-i18n="menu.searchLabel">Chercher dans le menu</label>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg>
+          <input id="menu-search" type="search" autocomplete="off" enterkeyhint="search" data-i18n-attr="placeholder:menu.search" placeholder="Chercher : matcha, pesto, pistache…">
+        </div>
+        <div class="filters" role="group" data-i18n-attr="aria-label:menu.filters" aria-label="Filtres">
+          <button class="filter" type="button" data-filter="chaud" aria-pressed="false" data-i18n="f.chaud">Chaud</button>
+          <button class="filter" type="button" data-filter="glace" aria-pressed="false" data-i18n="f.glace">Glacé</button>
+          <button class="filter" type="button" data-filter="decaf" aria-pressed="false" data-i18n="f.decaf">Sans caféine</button>
+          <button class="filter" type="button" data-filter="vege" aria-pressed="false" data-i18n="f.vege">Végé</button>
+          <button class="filter" type="button" data-filter="halal" aria-pressed="false" data-i18n="f.halal" hidden>Halal</button>
+        </div>
+        <p class="results-line"><span class="results" data-results aria-live="polite"></span> <button class="clear" type="button" data-clear hidden data-i18n="menu.clear">Tout effacer</button></p>
+      </div>
+      <div data-sticky-sentinel aria-hidden="true"></div>
+      <nav class="sticky" data-sticky data-i18n-attr="aria-label:menu.categories" aria-label="Catégories du menu">
+        <div class="catbar" data-catbar></div>
+      </nav>
+    </aside>
+
+    <!-- Colonne de droite : vedette (carrousel) puis toutes les catégories -->
+    <div class="menu-main" id="menu-list">
+      <div data-menu></div>
+      <div class="empty" data-empty hidden>
+        <span class="m-wrap m-walk" data-mascot-el="cookie"></span>
+        <p data-i18n="menu.empty">Rien ne correspond. Essaie un autre mot ou retire un filtre.</p>
+      </div>
+      <p class="menu-foot" data-i18n="footer.avail">Les articles peuvent varier selon la disponibilité.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="band band--navy footer">
+  <div class="wrap">
+    <div class="walkline" aria-hidden="true"><span class="walker m-walk" data-mascot-el="glass"></span></div>
+    <div class="footer-in">
+      <p class="footer-word">KAZA CAFÉ</p>
+      <div class="footer-cols">
+        <p>3306 boul. Rosemont<br>Montréal, QC H1X 1K2</p>
+        <p>(514) 291-0192<br>@kazacafe.mtl</p>
+      </div>
+      <p class="footer-avail" data-i18n="footer.avail">Les articles peuvent varier selon la disponibilité.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Fiche détaillée -->
+<div class="sheet-root" data-sheet-root hidden>
+  <div class="sheet-backdrop" data-sheet-backdrop></div>
+  <div class="sheet" data-sheet role="dialog" aria-modal="true" aria-labelledby="sheet-title" tabindex="-1">
+    <div class="sheet-grip" aria-hidden="true"></div>
+    <button class="sheet-close" type="button" data-sheet-close data-i18n-attr="aria-label:sheet.close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <div class="sheet-scroll" data-sheet-scroll>
+      <div class="sheet-media media" data-sheet-media></div>
+      <div class="sheet-body" data-sheet-body>
+        <p class="sheet-cat" data-sheet-cat></p>
+        <div class="sheet-head"><h2 class="sheet-title" id="sheet-title"></h2><p class="sheet-price" data-sheet-price></p></div>
+        <div data-sheet-badges></div>
+        <p class="sheet-desc" data-sheet-desc></p>
+        <div data-sheet-ing-wrap><p class="sheet-label" data-i18n="sheet.ing">Ingrédients</p><ul class="sheet-ing" data-sheet-ing></ul></div>
+        <div class="sheet-opts" data-sheet-opts></div>
+        <div class="sheet-actions">
+          <a class="btn" href="#" data-order><span data-i18n="sheet.order">Commander</span></a>
+          <button class="share" type="button" data-share data-i18n="sheet.share">Copier le lien</button>
+        </div>
+        <p class="avail" data-i18n="footer.avail">Les articles peuvent varier selon la disponibilité.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="shared/menu-data.js"></script>
+<script src="shared/mascots.js"></script>
+<script src="shared/site.js"></script>
+<script src="shared/menu-app.js"></script>
+</body>
+</html>
